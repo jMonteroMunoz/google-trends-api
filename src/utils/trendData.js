@@ -22,7 +22,8 @@ module.exports = function request(keywords, cbFunc){
 
 function promiseArr(keywords){
 	return keywords.map(function(keyword){
-		return rp(`http://www.google.com/trends/fetchComponent?hl=es&q="${keyword}"&cid=TIMESERIES_GRAPH_0&geo=es&export=3`)
+		return rp(`http://www.google.com/trends/fetchComponent?q=gorra,camiseta&date=1%2F2014%2024m&cid=TIMESERIES_GRAPH_0&export=3&geo=es`)
+		//return rp(`http://www.google.com/trends/fetchComponent?hl=es&q="${keyword}"&cid=TIMESERIES_GRAPH_0&geo=es&export=3`)
 		//return rp(`http://www.google.com/trends/fetchComponent?q="${keyword}"&cid=TIMESERIES_GRAPH_0&export=3`)
 		.then(function(htmlString){
 			return parseJSON(htmlString);

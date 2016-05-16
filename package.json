@@ -1,5 +1,5 @@
 {
-  "name": "google-trends-api",
+  "name": "google-trends-api-es",
   "version": "1.2.4",
   "description": "an API layer on top of google trends",
   "main": "index.js",
