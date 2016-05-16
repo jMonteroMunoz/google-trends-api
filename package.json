@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "compile": "./node_modules/.bin/babel --presets es2015 -d lib/ src/",
+    "compile": "babel --presets es2015 -d lib/ src/",
     "test-cov": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec ./test/*",
     "prepublish": "npm run compile",
     "pretest": "npm run compile"
@@ -40,5 +40,8 @@
     "coveralls": "^2.11.8",
     "istanbul": "^0.4.2",
     "mocha": "^2.4.5"
+  },
+  "directories": {
+    "test": "test"
   }
 }
